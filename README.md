@@ -25,7 +25,11 @@ swift build
 ## 在 Xcode 中打开
 
 ```bash
+# Swift Package
 open Package.swift
+
+# Xcode 工程 WWSwift (macOS SwiftUI 应用)
+open WWSwift.xcodeproj
 ```
 
 ## 许可证
