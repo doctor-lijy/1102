@@ -12,7 +12,6 @@
 ## 2. 架构设计原则
 
 - **模块化**: 按功能划分模块，降低耦合
-- **可测试**: 依赖注入，便于单元测试
 - **可扩展**: 清晰的层次结构，便于新增功能
 - **单一职责**: 每个模块/类型专注单一职责
 
@@ -46,11 +45,6 @@
 │       └── Shared/               # 共享组件
 │           ├── Extensions/
 │           └── Helpers/
-│
-└── Tests/
-    └── AppTests/                 # 单元测试
-        ├── CoreTests/
-        └── FeatureTests/
 ```
 
 ---
@@ -113,7 +107,6 @@ Features → Core → Shared
 | 包管理 | Swift Package Manager |
 | UI 框架 | SwiftUI（可选） |
 | 异步 | async/await |
-| 测试 | XCTest |
 
 ---
 
@@ -133,7 +126,7 @@ Features → Core → Shared
 
 - **Phase 1**: 搭建基础框架、Core 模块
 - **Phase 2**: 实现首个 Feature 模块
-- **Phase 3**: 完善测试、文档
+- **Phase 3**: 完善文档
 - **Phase 4**: 按需添加新 Feature
 
 ---

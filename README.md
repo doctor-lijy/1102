@@ -20,9 +20,6 @@ cd 1102-swift
 
 # 构建
 swift build
-
-# 运行测试
-swift test
 ```
 
 ## 在 Xcode 中打开

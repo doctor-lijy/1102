@@ -18,10 +18,5 @@ let package = Package(
             name: "App",
             path: "Sources/App"
         ),
-        .testTarget(
-            name: "AppTests",
-            dependencies: ["App"],
-            path: "Tests/AppTests"
-        ),
     ]
 )
