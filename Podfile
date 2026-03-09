@@ -6,10 +6,8 @@ target 'WWSwift' do
   use_frameworks!
 
   # Pods for WWSwift
-  # 示例：添加常用三方库（可按需取消注释）
-  # pod 'Alamofire'
-  # pod 'SnapKit'
-  # pod 'Kingfisher'
+  pod 'Alamofire'
+  pod 'SnapKit'
 
 end
 

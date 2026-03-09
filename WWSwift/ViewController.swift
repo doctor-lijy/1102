@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
 
@@ -15,24 +16,23 @@ class ViewController: UIViewController {
         let imageView = UIImageView(image: UIImage(systemName: "swift"))
         imageView.tintColor = .systemBlue
         imageView.contentMode = .scaleAspectFit
-        imageView.translatesAutoresizingMaskIntoConstraints = false
 
         let label = UILabel()
         label.text = "Hello, WWSwift!"
         label.font = .systemFont(ofSize: 24, weight: .medium)
-        label.translatesAutoresizingMaskIntoConstraints = false
 
         view.addSubview(imageView)
         view.addSubview(label)
 
-        NSLayoutConstraint.activate([
-            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -30),
-            imageView.widthAnchor.constraint(equalToConstant: 80),
-            imageView.heightAnchor.constraint(equalToConstant: 80),
+        imageView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-30)
+            make.width.height.equalTo(80)
+        }
 
-            label.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
-            label.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
+        label.snp.makeConstraints { make in
+            make.top.equalTo(imageView.snp.bottom).offset(20)
+            make.centerX.equalToSuperview()
+        }
     }
 }
