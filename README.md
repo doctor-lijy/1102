@@ -28,8 +28,20 @@ swift build
 # Swift Package
 open Package.swift
 
-# Xcode 工程 WWSwift (macOS SwiftUI 应用)
-open WWSwift.xcodeproj
+# Xcode 工程 WWSwift (iOS UIKit 应用，使用 CocoaPods)
+open WWSwift.xcworkspace
+```
+
+## CocoaPods
+
+项目使用 CocoaPods 管理三方库。
+
+```bash
+# 安装依赖（首次克隆或 Podfile 变更后执行）
+pod install
+
+# 之后请使用 .xcworkspace 打开项目，勿使用 .xcodeproj
+open WWSwift.xcworkspace
 ```
 
 ## 许可证
